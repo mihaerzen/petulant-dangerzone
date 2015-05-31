@@ -1,0 +1,135 @@
+.form {
+  background-color: #fff;
+  margin-top: 75px;
+
+  padding-bottom: 50px;
+}
+
+.form__container {
+  @extend .container;
+}
+
+.form__notice {
+  padding: 25px 0;
+  border-bottom: 1px solid;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.form__secure {
+  color: #aaaaaa;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 14px 0px 30px 21px;
+  background-image: url("../images/lock.png");
+  background-repeat: no-repeat;
+  background-position: 0 14px;
+  background-size: 11px 14px;
+}
+
+.form__title {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.form__submit{
+  width: 100%;
+  border: 1px solid #e3b000;
+  background-color: #fad902;
+  height: 52px;
+  font-size: 16px;
+  color: #3e3d3d;
+  font-family: $font-family-bold;
+  cursor: pointer;
+  outline: none;
+  @include border-radius(2px);
+  @include linear-gradient(#fad902, #e9bb02);
+  @include transition(all, 200ms, ease);
+  &:hover, &:focus, &:active{
+    @include linear-gradient(#e9bb02, #fad902);
+  }
+  &:active{
+    @include box-shadow(0, 5px, 20px, rgba(0,0,0,0.2), true);
+  }
+}
+
+.form-group {
+  @extend .row;
+  padding-top: $gutter / 2;
+  padding-bottom: $gutter / 2;
+}
+
+.form-group__label {
+  @extend .col12;
+  margin-bottom: $gutter / 4;
+  &.error {
+    color: $red;
+  }
+
+  label:after{
+    content: "*";
+  }
+}
+
+.form-group__inputs {
+  @extend .col12;
+}
+
+.form-group__label--street,
+.form-group__label--ort {
+  @extend .form-group__label;
+  @include col(8);
+}
+
+.form-group__label--number,
+.form-group__label--plz {
+  @extend .form-group__label;
+  @include col(4);
+}
+
+.form-group__label--street,
+.form-group__label--ort,
+.form-group__label--number,
+.form-group__label--plz {
+  label:after{
+    content: "*";
+  }
+}
+
+/* TABLET */
+@media (min-width: $screen-tablet) {
+  .form-group__label,
+  .form-group__label--street,
+  .form-group__label--plz {
+    @include col(3);
+    text-align: right;
+    height: 40px;
+    margin-bottom: 0;
+    display: table;
+
+    label{
+      @extend .valign;
+    }
+  }
+  .form-group__label--street label:after{
+    content: "/Nr.*";
+  }
+  .form-group__label--plz label:after{
+    content: "/Ort*";
+  }
+
+  .form-group__inputs {
+    @include col(9);
+  }
+
+  .form-group__label--number,
+  .form-group__label--ort {
+    display: none;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: $screen-desktop) {
+
+}

@@ -1,0 +1,75 @@
+// reset
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $beige;
+  font-family: $font-family;
+  color: $defaultColor;
+  text-align: center;
+}
+
+h1{
+  font-family: $font-family-bold;
+  font-weight: normal;
+}
+
+input[type=text],
+input[type=number],
+input[type=password]{
+  outline: none;
+  background-color: $beige;
+  border: 1px solid #a7a7a7;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 10px;
+  width: 100%;
+
+  &.error{
+    border: 2px solid $red;
+  }
+}
+
+input[type=radio],
+input[type=checkbox]{
+  cursor: pointer;
+}
+
+a{
+  color: $blue;
+  text-decoration: none;
+  @include transition(all, 200ms, ease);
+  &:hover, &:focus{
+    text-decoration: underline;
+  }
+}
+
+button{
+  padding: $gutter / 2;
+  border: none;
+  background-color: #edece4;
+  color: $blue;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  @include transition(all, 200ms, ease);
+  &:hover, &:focus{
+    background-color: lighten(#edece4, 5%);
+  }
+  &:active{
+    background-color: darken(#edece4, 5%);
+  }
+}
+
+.valign{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.pointer{
+  cursor: pointer;
+}

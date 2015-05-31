@@ -1,0 +1,42 @@
+// variables
+$navigation-color: #515b63;
+$navigation-font_size: 16px;
+
+// implementation
+.navigation {
+  height: 58px;
+  padding: 0 $gutter;
+  border-bottom: 10px solid $blue;
+  text-align: right;
+  font-size: $navigation-font_size;
+  background-color: #fff;
+}
+
+.navigation__wrapper {
+  float: right;
+  display: table;
+  height: 100%;
+}
+
+.navigation__link,
+.navigation__link--last{
+  @extend .valign;
+  a {
+    border-right: 1px solid $navigation-color;
+    padding: 0 $gutter / 2;
+    color: $navigation-color;
+    &:hover, &:focus{
+      color: $blue;
+    }
+  }
+}
+
+.navigation__link--last {
+  a{
+    border-right: none;
+  }
+}
+
+.navigation__button{
+  @extend .valign;
+}

@@ -1,0 +1,55 @@
+.before {
+  display: table;
+  content: " ";
+}
+
+.clear {
+  clear: both;
+}
+
+.container {
+  padding: 0 $gutter;
+  margin: 0 auto;
+  text-align: left;
+  @include transition(width, 400ms, ease);
+}
+
+.row {
+  margin-left: -$gutter / 2;
+  margin-right: -$gutter / 2;
+
+  &:before {
+    @extend .before;
+  }
+
+  &:after {
+    @extend .before;
+    @extend .clear;
+  }
+}
+
+//
+.col {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+}
+
+// grid
+@include grid-columns;
+
+/* TABLET */
+@media (min-width: $screen-tablet) {
+  .container {
+    width: 695px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: $screen-desktop) {
+  .container {
+    width: 640px;
+  }
+}

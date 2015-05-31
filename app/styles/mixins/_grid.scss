@@ -1,0 +1,9 @@
+@mixin grid-columns() {
+  @for $i from 1 through 12 {
+    //$num: 13 - $i;
+    .col#{$i}{
+      @extend .col;
+      @include col($i);
+    }
+  }
+}

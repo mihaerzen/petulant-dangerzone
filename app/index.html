@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Juniqe.com - Challange</title>
     <meta name="description" content="Miha Erzen Junique.com Challange">
@@ -14,31 +14,196 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-      <li>HTML5 Boilerplate</li>
-      <li>Sass</li>
-
-      </ul>
+<nav class="navigation">
+    <div class="navigation__wrapper">
+        <div class="navigation__link">
+            <a href="#" title="Einstellungen">Einstellungen</a>
+        </div>
+        <div class="navigation__link">
+            <a href="#" title="FAQs">FAQs</a>
+        </div>
+        <div class="navigation__link--last">
+            <a href="#" title="Kontakt">Kontakt</a>
+        </div>
+        <div class="navigation__button">
+            <button title="Einloggen">EINLOGGEN</button>
+        </div>
     </div>
+</nav>
+
+<form class="form">
+    <section class="form__container">
+        <div class="form__notice">
+            Bereits registriert? <a href="">Hier Einloggen</a>
+        </div>
+
+        <div class="form__secure">
+            Sichere Verbindung
+        </div>
+
+        <h1 class="form__title">
+            Bitte melden Sie sich an
+        </h1>
+
+        <div class="form-group">
+            <div class="form-group__label">
+                <label>Vorname</label>
+            </div>
+
+            <div class="form-group__inputs">
+                <input type="text" placeholder="Vorname">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__label">
+                <label>Nachname</label>
+            </div>
+
+            <div class="form-group__inputs">
+                <input type="text" placeholder="Nachname">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__label">
+                <label>Geburtsdatum</label>
+            </div>
+
+            <div class="form-group__inputs">
+                <div class="row">
+                    <div class="col4">
+                        <input type="number" placeholder="TT" maxlength="2">
+                    </div>
+                    <div class="col4">
+                        <input type="number" placeholder="MM" maxlength="2">
+                    </div>
+                    <div class="col4">
+                        <input type="number" placeholder="JJJJ" maxlength="2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__label--street">
+                <label>Straße</label>
+            </div>
+            <div class="form-group__label--number">
+                <label>Nr.</label>
+            </div>
+
+            <div class="form-group__inputs">
+                <div class="row">
+                    <div class="col8">
+                        <input type="text" placeholder="Straße">
+                    </div>
+                    <div class="col4">
+                        <input type="text" placeholder="Nr.">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <div class="form-group__label--plz">
+                <label>PLZ</label>
+            </div>
+            <div class="form-group__label--ort">
+                <label>Ort.</label>
+            </div>
+
+            <div class="form-group__inputs">
+                <div class="row">
+                    <div class="col4">
+                        <input type="text" placeholder="PLZ">
+                    </div>
+                    <div class="col8">
+                        <input type="text" placeholder="Ort">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__label">
+                <label>Email-Adresse</label>
+            </div>
+
+            <div class="form-group__inputs">
+                <input type="text" placeholder="Email-Adresse">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__label">
+                <label>Passwort</label>
+            </div>
+
+            <div class="form-group__inputs">
+                <input type="password" placeholder="Passwort">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label error">Passwort wiederholen</label>
+
+            <div class="form-group__inputs">
+                <input type="password" placeholder="Passwort wiederholen" class="error">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label"></label>
+            <div class="form-group__inputs">
+                <div class="row">
+                    <div class="col1">
+                        <input type="checkbox" name="toc" id="toc">
+                    </div>
+                    <div class="col11">
+                        <label class="pointer" for="toc">
+                            Ich stimme den und willige der bla zu Auskunfteien zu.<br>
+                            Dings und überhaupt zu. Ist sicher. <a href="#">Bestimmungen</a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label"></label>
+            <div class="form-group__inputs">
+                <input type="submit" value="WEITER" class="form__submit">
+            </div>
+        </div>
 
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+        <div class="form-group">
+            <label class="form-group__label"></label>
+            <div class="form-group__inputs">
+                *Pflichtfelder
+            </div>
+        </div>
+
+    </section>
+</form>
+
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({app,.tmp}) scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
 </body>
 </html>
